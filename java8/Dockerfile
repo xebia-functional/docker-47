@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM 47deg/baseimage
 
 MAINTAINER 47 Degrees <developer@47deg.com>
 
