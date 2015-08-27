@@ -6,8 +6,7 @@ MAINTAINER 47 Degrees <developer@47deg.com>
 RUN \
     apt-get update; \
     apt-get install -y -qq python-dev python-setuptools; \
-    easy_install pip; \
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    easy_install pip;
 
 # Download and extract OpsCenter
 RUN \
