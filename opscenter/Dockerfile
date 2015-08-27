@@ -31,4 +31,4 @@ WORKDIR /opt/opscenter
 # Clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-CMD ["bash"]
+CMD ["/sbin/my_init"]

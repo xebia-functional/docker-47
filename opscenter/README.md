@@ -20,11 +20,11 @@ Based on Cassandra Datastax OpsCenter, version 5.2.0.
 
 By default:
 
-	docker run -d --name opscenter abh1nav/opscenter:latest
+	docker run -d --name opscenter 47deg/opscenter
 
 You may also want to expose OpsCenter service ports:
 
-    docker run -d --name opscenter -p 8888:8888 -p 61620:61620 abh1nav/opscenter:latest
+    docker run -d --name opscenter -p 8888:8888 -p 61620:61620 47deg/opscenter
 
 ## Acknowledgements
 
