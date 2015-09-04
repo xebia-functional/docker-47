@@ -61,3 +61,7 @@ bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.4.0.jar grep i
 # check the output
 bin/hdfs dfs -cat output/*
 ```
+
+## Acknowledgements
+
+This docker image is based on @sequenceiq work, in his excellent repository https://github.com/sequenceiq/hadoop-docker
