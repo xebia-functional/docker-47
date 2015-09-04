@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker build --rm --no-cache -t 47deg/yarn-cluster .
