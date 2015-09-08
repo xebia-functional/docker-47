@@ -8,7 +8,7 @@ This repository contains a set of scripts and configuration files to run a [Apac
 
 ## Build Docker Image
 
-    docker build -t 47deg/yarn-cluster .
+    docker build --rm --no-cache -t 47deg/yarn-cluster .
     
 ## Push Image
 
