@@ -20,7 +20,7 @@ This repository contains a set of scripts and configuration files to run a [Apac
     
 ## Run
 
-To run master a Spark Master node:
+To run a Spark Master node:
 
 ```
 docker run -d -t \
