@@ -2,7 +2,7 @@
 
 This repository contains a set of scripts and configuration files to run a [Apache Spark](https://spark.apache.org/) standalone cluster from [Docker](https://www.docker.io/) container.
 
-* Spark 1.4.1
+* Spark 1.5.0
 * Scala 2.11
 * Pre-built for Hadoop 2.4.0
 
@@ -12,12 +12,12 @@ This repository contains a set of scripts and configuration files to run a [Apac
 
 ## Build Docker Image
 
-    docker build -t 47deg/spark .
-    
+    docker build -t 47deg/spark:1.5.0 .
+
 ## Push Image
 
-    docker push 47deg/spark
-    
+    docker push 47deg/spark:1.5.0
+
 ## Run
 
 To run a Spark Master node:
@@ -27,7 +27,7 @@ docker run -d -t \
 -p 7077:7077 \
 -p 8080:8080 \
 --name spark_master \
-47deg/spark \
+47deg/spark:1.5.0 \
 /start-master.sh "$@"
 ```
 
@@ -37,7 +37,7 @@ To run a worker node:
 docker run -d -t -P  \
 --name spark_worker_1 \
 --link spark_master:spark_master  \
-47deg/spark  \
+47deg/spark:1.5.0  \
 /start-worker.sh "$@"
 ```
 
