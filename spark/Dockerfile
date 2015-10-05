@@ -17,11 +17,12 @@ RUN curl -fsSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binar
   && mv /usr/share/apache-maven-$MAVEN_VERSION /usr/share/maven \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
-RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-1.4.1.tgz | tar -xz -C /usr/local/
-RUN cd /usr/local && ln -s spark-1.4.1 spark
-RUN cd /usr/local/spark/ && dev/change-version-to-2.11.sh && mvn -Phadoop-2.4 -Dscala-2.11 -DskipTests clean package
+RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-1.5.1.tgz | tar -xz -C /usr/local/
+RUN cd /usr/local && ln -s spark-1.5.1 spark
+RUN cd /usr/local/spark/ && dev/change-scala-version.sh 2.11 && mvn -Phadoop-2.4 -Dscala-2.11 -DskipTests clean package
 
 ENV SPARK_HOME /usr/local/spark
+RUN mkdir /usr/local/spark/logs
 
 ENV SPARK_MASTER_OPTS="-Dspark.driver.port=7001 -Dspark.fileserver.port=7002 -Dspark.broadcast.port=7003 -Dspark.replClassServer.port=7004 -Dspark.blockManager.port=7005 -Dspark.executor.port=7006 -Dspark.ui.port=4040 -Dspark.broadcast.factory=org.apache.spark.broadcast.HttpBroadcastFactory"
 ENV SPARK_WORKER_OPTS="-Dspark.driver.port=7001 -Dspark.fileserver.port=7002 -Dspark.broadcast.port=7003 -Dspark.replClassServer.port=7004 -Dspark.blockManager.port=7005 -Dspark.executor.port=7006 -Dspark.ui.port=4040 -Dspark.broadcast.factory=org.apache.spark.broadcast.HttpBroadcastFactory"
@@ -31,4 +32,4 @@ ENV SPARK_MASTER_WEBUI_PORT 8080
 ENV SPARK_WORKER_PORT 8888
 ENV SPARK_WORKER_WEBUI_PORT 8081
 
-EXPOSE 8080 7077 8888 8081 4040 7001 7002 7003 7004 7005 7006 
+EXPOSE 8080 7077 8888 8081 4040 7001 7002 7003 7004 7005 7006
