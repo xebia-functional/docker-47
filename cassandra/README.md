@@ -9,11 +9,11 @@ Based on Cassandra Datastax, version 2.1.8.
 ## Build Docker Image
 
 	docker build -t 47deg/cassandra .
-    
+
 ## Push Image
 
     docker push 47deg/cassandra
-	
+
 ## Run
 
 ### Opscenter
@@ -22,7 +22,7 @@ Based on Cassandra Datastax, version 2.1.8.
 
 To get the OpsCenter IP from the container:
 
-    OPS_IP=$(docker inspect -f '{{ .NetworkSettings.IPAddress }}' opscenter)    
+    OPS_IP=$(docker inspect -f '{{ .NetworkSettings.IPAddress }}' opscenter)
 
 ### Running Cassandra Nodes
 
@@ -39,4 +39,4 @@ To get the OpsCenter IP from the container:
 
 ## Acknowledgements
 
-This docker image is based on @abh1nav work, in his excellent repository https://github.com/abh1nav/docker-cassandra . 
+This docker image is based on @abh1nav work, in his excellent repository https://github.com/abh1nav/docker-cassandra .

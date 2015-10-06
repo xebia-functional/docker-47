@@ -9,11 +9,11 @@ This repository contains a set of scripts and configuration files to run [Zookee
 ## Build Docker Image
 
     docker build -t 47deg/zookeeper .
-    
+
 ## Push Image
 
     docker push 47deg/zookeeper
-    
+
 ## Run
 
 ```
