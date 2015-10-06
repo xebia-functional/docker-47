@@ -10,7 +10,7 @@ We have decided to organize all the Docker images in a single Github repository 
 
 Additionally we can say that all the docker images organization is hierarchical in this way:
 
-	- phusion/baseimage - https://github.com/phusion/baseimage-docker)
+	- phusion/baseimage - https://github.com/phusion/baseimage-docker
 		|- baseimage
 			|- java7
 				|- cassandra
