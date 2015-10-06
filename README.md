@@ -10,17 +10,17 @@ We have decided to organize all the Docker images in a single Github repository 
 
 Additionally we can say that all the docker images organization is hierarchical in this way:
 
-	- [phusion/baseimage](https://github.com/phusion/baseimage-docker)
-		|- [baseimage](baseimage/README.md)
-			|- [java7](java7/README.md)
-				|- [cassandra](cassandra/README.md)
-				|- [kafka](kafka/README.md)
-				|- [spark](spark/README.md)
-				|- [zookeeper](zookeeper/README.md)
-			|- [java8](java8/README.md)
-			|- [opscenter](opscenter/README.md)
-	- [sequenceiq/pam:centos-6.5](https://github.com/sequenceiq/docker-pam)
-		|- [yarn-cluster](yarn-cluster/README.md)
+	- phusion/baseimage - https://github.com/phusion/baseimage-docker)
+		|- baseimage
+			|- java7
+				|- cassandra
+				|- kafka
+				|- spark
+				|- zookeeper
+			|- java8
+			|- opscenter
+	- sequenceiq/pam:centos-6.5 - https://github.com/sequenceiq/docker-pam
+		|- yarn-cluster
 
 #License
 
