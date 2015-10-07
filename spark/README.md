@@ -46,4 +46,4 @@ You can run multiple workers. Every worker would be able to find master by its c
 
 ## Acknowledgements
 
-This docker image is based on @epahomov work, in his excellent repository https://github.com/epahomov/docker-spark 
+This docker image is based on @epahomov work, in his excellent repository https://github.com/epahomov/docker-spark .

@@ -9,7 +9,7 @@ This repository contains a set of scripts and configuration files to run a [Apac
 ## Build Docker Image
 
     docker build --rm --no-cache -t 47deg/yarn-cluster .
-    
+
 ## Push Image
 
     docker push 47deg/yarn-cluster
@@ -64,4 +64,4 @@ bin/hdfs dfs -cat output/*
 
 ## Acknowledgements
 
-This docker image is based on @sequenceiq work, in his excellent repository https://github.com/sequenceiq/hadoop-docker
+This docker image is based on @sequenceiq work, in his excellent repository https://github.com/sequenceiq/hadoop-docker .

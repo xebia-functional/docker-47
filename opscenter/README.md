@@ -9,11 +9,11 @@ Based on Cassandra Datastax OpsCenter, version 5.2.0.
 ## Build Docker Image
 
 	docker build -t 47deg/opscenter .
-    
+
 ## Push Image
 
     docker push 47deg/opscenter
-	
+
 ## Run
 
 ### Opscenter
@@ -28,4 +28,4 @@ You may also want to expose OpsCenter service ports:
 
 ## Acknowledgements
 
-This docker image is based on @abh1nav work, in his excellent repository https://github.com/abh1nav/docker-opscenter . 
+This docker image is based on @abh1nav work, in his excellent repository https://github.com/abh1nav/docker-opscenter .

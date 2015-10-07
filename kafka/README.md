@@ -9,11 +9,11 @@ This repository contains a set of scripts and configuration files to run a [Apac
 ## Build Docker Image
 
     docker build -t 47deg/kafka .
-    
+
 ## Push Image
 
     docker push 47deg/kafka
-    
+
 ## Run
 
 The best way to run kafka is using [docker-compose](https://docs.docker.com/compose/install/). You could create a `docker-compose.yml` like this:
@@ -21,13 +21,13 @@ The best way to run kafka is using [docker-compose](https://docs.docker.com/comp
 ```
 zookeeper:
   image: 47deg/zookeeper
-  ports: 
+  ports:
     - "2181"
 kafka:
   image: 47deg/kafka
   ports:
     - "9092"
-  links: 
+  links:
     - zookeeper:zk
   environment:
     KAFKA_ADVERTISED_HOST_NAME: 192.168.99.100
@@ -53,7 +53,7 @@ Destroy a cluster:
 docker-compose stop
 ```
 
-By default each broker will get a new port number and broker id on restart. Depending on your use case this might not be desirable. In that case you will need to attach the different brokers to an specific port, for example: 
+By default each broker will get a new port number and broker id on restart. Depending on your use case this might not be desirable. In that case you will need to attach the different brokers to an specific port, for example:
 
 ```
   ports:
@@ -84,4 +84,4 @@ If you want to customise any Kafka parameters, simply add them as environment va
 
 ## Acknowledgements
 
-This docker image is based on @wurstmeister work, in his excellent repository https://github.com/wurstmeister/kafka-docker
+This docker image is based on @wurstmeister work, in his excellent repository https://github.com/wurstmeister/kafka-docker .
